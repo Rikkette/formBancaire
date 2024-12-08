@@ -1,0 +1,128 @@
+/*-----------------------------------Background ----------------------------------*/
+
+body {
+    background-image: url("fond.png");
+    background-color: #cccccc;
+}
+
+/*------------------------------------- titre Header --------------------------*/
+
+h1 {
+    font-family: "Saira Stencil One", sans-serif;
+    color: darkgreen;
+    text-align: center;
+    background-color: gray;
+    padding: 10px;
+    opacity: 90%;
+    border: 1px solid black;
+}
+
+/*----------------------------------------police ecriture------------------------*/
+
+.saira-stencil-one-regular {
+    font-family: "Saira Stencil One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+div {
+    font-family: "Saira Stencil One", sans-serif;
+    color: darkgreen;
+    
+    justify-content: space-between;
+    background-color: gray ;
+
+}
+
+/*-------------------------------------Tableau--------------------------------------*/
+#formulaire {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    width: 100vw;
+    text-align: center;
+    grid-gap: 1px;
+    background-color: black;
+    opacity: 90%;
+    border: 1px solid black;
+}
+
+#formulaire>div {
+    height: 7rem;
+    align-content: space-evenly;
+    opacity: 90%;
+}
+
+/*-------------------------------------button------------------------------------*/
+
+button {
+    color: white;
+    background-color: darkgreen;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: green;
+}
+
+/*------------------------------------ Modal -----------------------------------*/
+
+.modal {
+    display: none; /* cache par défault */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  span.error {
+    color: red;
+}
+
+/*--------------------------------- Erreurs de saisie -------------------------------*/
+/* Positionnement  message d'erreur à droite */
+div input + .error {  
+    position: absolute;
+    color: red;
+    font-size: 12px;
+    left: 110%;
+    white-space: nowrap;
+    visibility: hidden; /* Par défaut masqué */
+}
+
+div input:focus + .error,
+div input:invalid + .error {
+    visibility: visible; /* Afficher si invalide */
+}
