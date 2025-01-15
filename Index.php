@@ -22,7 +22,12 @@
         <h1>Formulaire Bancaire</h1>
     </header>
     <main>
-        <form id="formulaire">
+        <form id="formulaire" name="form1" action="page1.php" method="POST">
+
+            <!-----php version  --->
+            prenom:<input type="text" name="prenom" /><br />
+            <input type="submit" value="ENVOYER" />
+
             <!-------------------- Nom --------------------->
             <div><label for="nom">Nom :</label></div>
             <div><input type="text" id="nom" name="nom" required placeholder="Nom"></div>
@@ -49,7 +54,26 @@
             <div><button id="submitButton" type="submit"> Envoyer </button></div>
             <div><button type="reset" id="resetBtn"> Annuler </button></div>
             <div><span class="error"></span></div>
+
         </form>
+
+        <?php
+
+        //exo formulaire : form action="monscript.php"> //
+
+        foreach ($_POST as $key => $value) {
+            echo "<li><strong>" . htmlspecialchars($key) . ":</strong> " .
+                htmlspecialchars($value) . "</li>";
+        }
+
+        //exo formulaire : $_REQUEST["nom_du_input"] //
+        
+        foreach ($_REQUEST["text"] as $text);
+        {
+            echo"$text - ";
+        }
+
+        ?>
         <!------------------------------------ Modal ---------------------------------------->
         <div id="myModal" class="modal">
             <div class="modal-content">
